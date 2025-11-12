@@ -1,6 +1,5 @@
 # Deep_Rural_livelihood_model
 Mapping China's rural livelihood index
-## Using publicly available satellite imagery and deep learning to understand economic well-being in Africa
 
 This repository includes the code and data necessary to reproduce the results and figures for the article "Mapping China's rural livelihood" published in *########* on May 22, 2026 ([link](https://*****)).
 
