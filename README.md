@@ -37,9 +37,9 @@ If you are using a GPU, you may need to also install CUDA 10 and cuDNN 7.
 
 ## Data Preparation Instructions
 
-1. **Export satellite images from Google Earth Engine.** Follow the instructions in the `download/export_ee_images.ipynb` notebook.
-2. **Process the satellite images.** Follow the instructions in the `preprocessing/process_tfrecords_dhs.ipynb` and `preprocessing/process_tfrecords_lsms.ipynb` notebooks. Then run the `preprocessing/analyze_tfrecords_dhs.ipynb` and `preprocessing/analyze_tfrecords_lsms.ipynb` notebooks.
-3. **Prepare the data files.** Follow the instructions in the `data_analysis/dhs.ipynb` and `data_analysis/lsms.ipynb` notebooks.
+1. **Export satellite images from Google Earth Engine.** Follow the instructions in the `Export_images_from_GEE.js` notebook.
+2. **Process the satellite images.** Follow the instructions in the `全国乡镇代码匹配到乡镇调查和街景数据.ipynb` and `全国乡镇街道办事处牧场等重分类为0或1.ipynb` notebooks. Then run the `样本扩充_分位数XGBoost回归.ipynb` notebooks.
+3. **Prepare the data files.** Follow the instructions in the `*****` and `` notebooks.
 
 
 ## Model Training Instructions
