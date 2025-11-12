@@ -1,5 +1,60 @@
 # Deep_Rural_livelihood_model
 Mapping China's rural livelihood index
+## Using publicly available satellite imagery and deep learning to understand economic well-being in Africa
+
+This repository includes the code and data necessary to reproduce the results and figures for the article "Mapping China's rural livelihood" published in *########* on May 22, 2026 ([link](https://*****)).
+
+Please cite this article as follows, or use the BibTeX entry below.
+
+> Dawazhaxi, *et al*. Mapping China's rural livelihood. *####* **11**, 2583 (2026). https://*******
+
+```tex
+#####
+```
+
+
+## Hardware and Software Requirements
+
+This code was tested on a system with the following specifications:
+
+- operating system: Windows 10
+- CPU: Intel(R) Xeon(R) Silver 4214 CPU @ 2.20GHz   2.19 GHz
+- memory (RAM): 125GB
+- disk storage: 500GB
+- Using device: cuda
+- GPU: Quadro P2200, Memory: 5.37 GB
+
+
+
+The main software requirements are Python 3.13 with TensorFlow r1.15, and R 3.6. 
+
+```bash
+####conda env create -f env.yml#####
+```
+
+If you are using a GPU, you may need to also install CUDA 10 and cuDNN 7.
+
+
+## Data Preparation Instructions
+
+1. **Export satellite images from Google Earth Engine.** Follow the instructions in the `download/export_ee_images.ipynb` notebook.
+2. **Process the satellite images.** Follow the instructions in the `preprocessing/process_tfrecords_dhs.ipynb` and `preprocessing/process_tfrecords_lsms.ipynb` notebooks. Then run the `preprocessing/analyze_tfrecords_dhs.ipynb` and `preprocessing/analyze_tfrecords_lsms.ipynb` notebooks.
+3. **Prepare the data files.** Follow the instructions in the `data_analysis/dhs.ipynb` and `data_analysis/lsms.ipynb` notebooks.
+
+
+## Model Training Instructions
+
+1. **Run the baseline linear models.** Follow the instructions in `models/dhs_baselines.ipynb`, `models/lsms_baselines.ipynb`, , and `models/lsmsdelta_baselines.ipynb`.
+2. **Train the convolutional neural network models.** If running this code on a SLURM-enabled computing cluster, run the scripts `train_directly_runner.py` and `train_directly_lsm_runner.py`. Otherwise, run `train_directly.py` and `train_delta.py` with the desired command-line arguments to set hyperparameters.
+3. **Extract learned feature representations.** Run the scripts `extract_features_dhs.py` and `extract_features_lsmsdelta.py`.
+4. **Run cross-validated ridge-regression.** Follow the instructions in `models/dhs_ridge_resnet.ipynb` and `model_analysis/lsmsdelta_resnet.ipynb`.
+
+
+## To reproduce figs:
+
+All necessary scripts should be in code_figs, and all necessary data should be in data. We included data of the summary stats for plotting, since the full microdata cannot be released. A few changes have been made to data and code to fix errors in plots. Code has been updated to fix an artificially inflated revisit rate for DigitalGlobe in Figure 1. Changes were made to the data on survey frequency used for Figure 1.
+
+For the maximally-activating activation maps, see the `model_analysis/max_activating.ipynb` notebook.
 
 
 <img width="315" height="494" alt="image" src="https://github.com/user-attachments/assets/c075f804-c38b-464f-bfd2-2c4cf2f5cfe9" />
