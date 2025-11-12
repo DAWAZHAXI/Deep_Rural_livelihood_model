@@ -1,5 +1,8 @@
 # Deep_Rural_livelihood_model
 Mapping China's rural livelihood index
+<img width="1882" height="297" alt="image" src="https://github.com/user-attachments/assets/467ffd48-9309-4e0b-8489-2c31e6138cc9" />
+
+
 
 This repository includes the code and data necessary to reproduce the results and figures for the article "Mapping China's rural livelihood" published in *########* on May 22, 2026 ([link](https://*****)).
 
@@ -58,7 +61,7 @@ All necessary scripts should be in code_figs, and all necessary data should be i
 For the maximally-activating activation maps, see the `model_analysis/max_activating.ipynb` notebook.
 
 
-<img width="315" height="494" alt="image" src="https://github.com/user-attachments/assets/c075f804-c38b-464f-bfd2-2c4cf2f5cfe9" />
+
 
 <!-- markdownlint-disable MD033 MD041 -->
 <p align="center">
