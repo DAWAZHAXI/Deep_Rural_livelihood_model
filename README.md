@@ -1,9 +1,13 @@
 # Deep_Rural_livelihood_model
 # This work was supported by:
 <img width="1386" height="164" alt="image" src="https://github.com/user-attachments/assets/7c9fc165-56aa-430a-955a-fb501bbe5edf" />
+# And my love:
+![c3655d9d1451fd3670d45e2cbb2bfa62](https://github.com/user-attachments/assets/5bc69864-791f-4204-9423-f83ff8eafe3a)
+
 
 # Mapping China's rural livelihood index
-<img width="1882" height="297" alt="image" src="https://github.com/user-attachments/assets/467ffd48-9309-4e0b-8489-2c31e6138cc9" />
+<img width="1802" height="311" alt="image" src="https://github.com/user-attachments/assets/f1c883fa-2063-4bda-8cf0-fbda70da5644" />
+
 
 
 This repository includes the code and data necessary to reproduce the results and figures for the article "Mapping China's rural livelihood" published in *########* on May 22, 2026 ([link](https://*****)).
