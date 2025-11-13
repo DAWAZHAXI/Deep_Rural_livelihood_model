@@ -54,7 +54,9 @@ If you are using a GPU, you may need to also install CUDA 10 and cuDNN 7.
 
 # Model structure
 ```text
-      Day (Landsat 7 bands)        Night (VIIRS Nighttime light 1 band)
+           Day images                         Night images
+     (7 bands:RED, GREEN, BLUE,              Nighttime light
+     NIR, SWIR1, SWIR2, TEMP1 )              (1 band: VIIRS)
                │                                     │
      ┌─────────┴───────────┐             ┌───────────┴─────────┐
      │ 1×1 Conv + BN + ReLU              │ 1×1 Conv + BN + ReLU
