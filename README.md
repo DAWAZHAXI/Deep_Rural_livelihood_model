@@ -58,13 +58,13 @@ If you are using a GPU, you may need to also install CUDA 10 and cuDNN 7.
 
 # Model structure
 ```text
-        Day (7 bands)                       Night (1 band)
-             │                                   │
-      ┌──────┴───────────┐                ┌──────┴───────────┐
-      │ 1×1 Conv + BN + ReLU                │ 1×1 Conv + BN + ReLU
+            Day (7 bands)                       Night (1 band)
+                  │                                   │
+      ┌───────────┴─────────┐             ┌───────────┴───────────┐
+      │ 1×1 Conv + BN + ReLU              │ 1×1 Conv + BN + ReLU
       │ (SourceAdapter)                   │   (SourceAdapter)
-      └─────────┬───────────┘                └───────────┬───────────┘
-                │                                   │
+      └─────────┬───────────┘             └───────────┬───────────┘
+                │                                     │
                 └─────────── Concatenate ─────────────┘
                          (14 or 128 channels)
                                   │
