@@ -71,7 +71,7 @@ If you are using a GPU, you may need to also install CUDA 10 and cuDNN 7.
    └─────────────────────────────┬──────────────────────────────┘
                                  │
                    CompositionHead（Dirichlet α）
-                      Conv → BN → ReLU → Dropout → Conv
+                  Conv → BN → ReLU → Dropout → Conv
                                  │
                            α → softplus + 1
                                  │
