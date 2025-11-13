@@ -33,7 +33,7 @@ This code was tested on a system with the following specifications:
 The main software requirements are Python 3.13 with TensorFlow r1.15, and R 3.6. 
 
 ```bash
-####conda env create -f env.yml#####
+####requirements.txt#####
 ```
 
 If you are using a GPU, you may need to also install CUDA 10 and cuDNN 7.
