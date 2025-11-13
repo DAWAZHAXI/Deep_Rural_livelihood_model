@@ -54,7 +54,7 @@ If you are using a GPU, you may need to also install CUDA 10 and cuDNN 7.
 
 # Model structure
 ```text
-            Day (7 bands)                       Night (1 band)
+        Day (Landsat 7 bands)        Night (VIIRS Nighttime Light 1 band)
                   │                                   │
       ┌───────────┴─────────┐             ┌───────────┴───────────┐
       │ 1×1 Conv + BN + ReLU              │ 1×1 Conv + BN + ReLU
@@ -69,9 +69,9 @@ If you are using a GPU, you may need to also install CUDA 10 and cuDNN 7.
       │  = Conv → BN → ReLU → ResidualBlock×5 → Conv → BN → ReLU │
       └───────────────────────────┬──────────────────────────────┘
                                   │
-                       CompositionHead（Dirichlet α）
-                        Conv → BN → ReLU → Dropout → Conv
+                      CompositionHead（Dirichlet α）
+                   Conv → BN → ReLU → Dropout → Conv
                                   │
-                         α → softplus + 1
+                           α → softplus + 1
                                   │
-                         中心像元 Dirichlet 负对数似然 loss
+                     像元 Dirichlet 负对数似然 loss
