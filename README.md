@@ -54,24 +54,25 @@ If you are using a GPU, you may need to also install CUDA 10 and cuDNN 7.
 
 # Model structure
 ```text
-        Day (Landsat 7 bands)        Night (VIIRS Nighttime Light 1 band)
-                  │                                   │
-      ┌───────────┴─────────┐             ┌───────────┴───────────┐
-      │ 1×1 Conv + BN + ReLU              │ 1×1 Conv + BN + ReLU
-      │ (SourceAdapter)                   │   (SourceAdapter)
-      └─────────┬───────────┘             └───────────┬───────────┘
-                │                                     │
-                └─────────── Concatenate ─────────────┘
-                         (14 or 128 channels)
-                                  │
-      ┌───────────────────────────┴──────────────────────────────┐
-      │                   ConvStem (num_blocks=5)                │
-      │  = Conv → BN → ReLU → ResidualBlock×5 → Conv → BN → ReLU │
-      └───────────────────────────┬──────────────────────────────┘
-                                  │
-                      CompositionHead（Dirichlet α）
-                   Conv → BN → ReLU → Dropout → Conv
-                                  │
+         Day (7 bands)                         Night (1 band)
+               │                                     │
+     ┌─────────┴───────────┐             ┌───────────┴─────────┐
+     │ 1×1 Conv + BN + ReLU              │ 1×1 Conv + BN + ReLU
+     │ (SourceAdapter)                   │    (SourceAdapter)
+     └─────────┬───────────┘             └───────────┬─────────┘
+               │                                     │
+               └─────────── Concatenate ─────────────┘     
+                   (2 × C_shared = 128 channels)
+
+                                 │
+   ┌─────────────────────────────┴──────────────────────────────┐
+   │                 ConvStem (num_blocks=5)                    │
+   │    = Conv → BN → ReLU → ResidualBlock×5 → Conv → BN → ReLU │
+   └─────────────────────────────┬──────────────────────────────┘
+                                 │
+                   CompositionHead（Dirichlet α）
+                      Conv → BN → ReLU → Dropout → Conv
+                                 │
                            α → softplus + 1
-                                  │
-                     像元 Dirichlet 负对数似然 loss
+                                 │
+                   中心像元 Dirichlet 负对数似然 loss
