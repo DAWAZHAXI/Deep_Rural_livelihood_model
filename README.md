@@ -44,7 +44,6 @@ If you are using a GPU, you may need to also install CUDA 10 and cuDNN 7.
 
 
 ## Data Preparation Instructions
-
 1. **Export satellite images from Google Earth Engine.** Follow the instructions in the `Export_images_from_GEE.js` notebook.
 2. **Process the satellite images.** Follow the instructions in the `全国乡镇代码匹配到乡镇调查和街景数据.ipynb` and `全国乡镇街道办事处牧场等重分类为0或1.ipynb` notebooks. Then run the `样本扩充_分位数XGBoost回归.ipynb` notebooks.
 3. **Prepare the data files.** Follow the instructions in the `提取乡_镇或街道或街道办事处或办事处V2.csv`, `全国乡镇.csv` and `indexes_of_30667_towns_with_natcodes_bycode_name.csv` notebooks in `Pre-Data`.
@@ -52,19 +51,10 @@ If you are using a GPU, you may need to also install CUDA 10 and cuDNN 7.
 
 
 ## Model Training Instructions
-
 1. **Run the baseline linear models.** Follow the instructions in `models/dhs_baselines.ipynb`, `models/lsms_baselines.ipynb`, , and `models/lsmsdelta_baselines.ipynb`.
 2. **Train the convolutional neural network models.** If running this code on a SLURM-enabled computing cluster, run the scripts `train_directly_runner.py` and `train_directly_lsm_runner.py`. Otherwise, run `train_directly.py` and `train_delta.py` with the desired command-line arguments to set hyperparameters.
 3. **Extract learned feature representations.** Run the scripts `extract_features_dhs.py` and `extract_features_lsmsdelta.py`.
 4. **Run cross-validated ridge-regression.** Follow the instructions in `models/dhs_ridge_resnet.ipynb` and `model_analysis/lsmsdelta_resnet.ipynb`.
-
-
-
-## To reproduce figs:
-
-All necessary scripts should be in code_figs, and all necessary data should be in data. We included data of the summary stats for plotting, since the full microdata cannot be released. A few changes have been made to data and code to fix errors in plots. Code has been updated to fix an artificially inflated revisit rate for DigitalGlobe in Figure 1. Changes were made to the data on survey frequency used for Figure 1.
-
-For the maximally-activating activation maps, see the `model_analysis/max_activating.ipynb` notebook.
 
 # Model structure
 ```text
