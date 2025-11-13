@@ -67,7 +67,7 @@ All necessary scripts should be in code_figs, and all necessary data should be i
 For the maximally-activating activation maps, see the `model_analysis/max_activating.ipynb` notebook.
 
 # Model structure
-`         Day (7 bands)                         Night (1 band)
+         Day (7 bands)                         Night (1 band)
                │                                     │
      ┌─────────┴───────────┐             ┌───────────┴─────────┐
      │ 1×1 Conv + BN + ReLU              │ 1×1 Conv + BN + ReLU
@@ -77,7 +77,7 @@ For the maximally-activating activation maps, see the `model_analysis/max_activa
                └─────────── Concatenate ─────────────┘
                         (14 or 128 channels)
                                  │
-   ┌─────────────────────────────┴──────────────────────────────┐
+`  ┌─────────────────────────────┴──────────────────────────────┐
    │                 ConvStem (num_blocks=5)                    │
    │    = Conv → BN → ReLU → ResidualBlock×5 → Conv → BN → ReLU │
    └─────────────────────────────┬──────────────────────────────┘
@@ -87,7 +87,8 @@ For the maximally-activating activation maps, see the `model_analysis/max_activa
                                  │
                            α → softplus + 1
                                  │
-                   中心像元 Dirichlet 负对数似然 loss`
+                   中心像元 Dirichlet 负对数似然 loss
+                  `
 
 
 <!-- markdownlint-disable MD033 MD041 -->
