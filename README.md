@@ -4,7 +4,7 @@
 # And my love:
 <img width="153" height="425" alt="image" src="https://github.com/user-attachments/assets/8c4393a9-2ddf-4846-80eb-06d2fcccdec4" />
 
-==================================================================================================================================================
+             ========================================================
 # Mapping China's rural livelihood index
 <img width="1802" height="311" alt="image" src="https://github.com/user-attachments/assets/f1c883fa-2063-4bda-8cf0-fbda70da5644" />
 
@@ -67,7 +67,7 @@ All necessary scripts should be in code_figs, and all necessary data should be i
 For the maximally-activating activation maps, see the `model_analysis/max_activating.ipynb` notebook.
 
 # Model structure
-         Day (7 bands)                         Night (1 band)
+`         Day (7 bands)                         Night (1 band)
                │                                     │
      ┌─────────┴───────────┐             ┌───────────┴─────────┐
      │ 1×1 Conv + BN + ReLU              │ 1×1 Conv + BN + ReLU
@@ -87,8 +87,7 @@ For the maximally-activating activation maps, see the `model_analysis/max_activa
                                  │
                            α → softplus + 1
                                  │
-                   中心像元 Dirichlet 负对数似然 loss
-
+                   中心像元 Dirichlet 负对数似然 loss`
 
 
 <!-- markdownlint-disable MD033 MD041 -->
