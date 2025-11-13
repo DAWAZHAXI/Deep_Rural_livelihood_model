@@ -63,7 +63,6 @@ If you are using a GPU, you may need to also install CUDA 10 and cuDNN 7.
                │                                     │
                └─────────── Concatenate ─────────────┘     
                    (2 × C_shared = 128 channels)
-
                                  │
    ┌─────────────────────────────┴──────────────────────────────┐
    │                 ConvStem (num_blocks=5)                    │
