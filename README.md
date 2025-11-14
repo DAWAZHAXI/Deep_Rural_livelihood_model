@@ -76,4 +76,5 @@ If you are using a GPU, you may need to also install CUDA 10 and cuDNN 7.
                                  │
                            α → softplus + 1
                                  │
-                   中心像元 Dirichlet 负对数似然 loss
+                           Centre pixel
+                Dirichlet negative log-likelihood loss
