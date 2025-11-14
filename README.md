@@ -60,7 +60,7 @@ If you are using a GPU, you may need to also install CUDA 10 and cuDNN 7.
                │                                     │
      ┌─────────┴───────────┐             ┌───────────┴─────────┐
      │ 1×1 Conv + BN + ReLU              │ 1×1 Conv + BN + ReLU
-     │ (SourceAdapter)                   │    (SourceAdapter)
+     │   (SourceAdapter)                 │    (SourceAdapter)
      └─────────┬───────────┘             └───────────┬─────────┘
                │                                     │
                └─────────── Concatenate ─────────────┘     
