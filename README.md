@@ -137,13 +137,29 @@ Our **FusionResNetDirichlet** model employs a dual-branch architecture for proce
 
 ### Component Definitions
 
-| Component | Abbr | Description |
-|-----------|------|-------------|
-| **Forest** | F | Pure forest pixels |
-| **Forest-NonForest** | F_NF | Forest → Non-forest transition |
-| **NonForest-Forest** | NF_F | Non-forest → Forest transition |
-| **NonForest** | NF | Pure non-forest pixels |
+Our model predicts four distinct rural livelihood types based on household income composition:
 
+| Component | Abbreviation | Description | Income Structure |
+|-----------|--------------|-------------|------------------|
+| **Farming-dominant** | F | Household income is entirely or predominantly dependent on agricultural production activities | Primary: Agriculture (>70%)<br>Secondary: Minimal non-farm |
+| **Farming with secondary non-farming income** | F_NF | Household income primarily derived from agriculture but supplemented by non-farming activities such as handicrafts, seasonal labor, or small business | Primary: Agriculture (50-70%)<br>Secondary: Non-farm income |
+| **Non-farming with secondary farming income** | NF_F | Household income primarily from non-agricultural sources (manufacturing, services, trade) while maintaining subsistence or small-scale farming | Primary: Non-farm (50-70%)<br>Secondary: Agriculture |
+| **Non-farming-dominant** | NF | Household income is entirely or predominantly derived from non-agricultural employment or business activities | Primary: Non-farm (>70%)<br>Secondary: Minimal agriculture |
+
+**Mathematical Constraint**: F + F_NF + NF_F + NF = 1.0 (proportions sum to unity)
+
+#### Livelihood Transition Spectrum
+```
+Pure Farming (F) ←─→ F_NF ←─→ NF_F ←─→ Pure Non-Farming (NF)
+    │                                          │
+    └──────── Transition Zone ─────────────────┘
+```
+
+**Real-World Examples:**
+- **F**: Traditional grain-producing villages in Henan Province
+- **F_NF**: Rice farming areas with emerging agritourism in Jiangxi
+- **NF_F**: Peri-urban townships near Shenzhen with factory workers maintaining kitchen gardens
+- **NF**: Fully industrialized townships in Dongguan manufacturing belt
 **Constraint**: F + F_NF + NF_F + NF = 1.0
 
 ### Model Statistics
@@ -165,10 +181,10 @@ Our **FusionResNetDirichlet** model employs a dual-branch architecture for proce
 
 | Component | R² Score | MAE | RMSE |
 |-----------|----------|-----|------|
-| Forest (F) | 0.82 ± 0.03 | 0.08 | 0.12 |
+| F| 0.82 ± 0.03 | 0.08 | 0.12 |
 | F-NF | 0.75 ± 0.04 | 0.11 | 0.15 |
 | NF-F | 0.77 ± 0.03 | 0.10 | 0.14 |
-| NonForest (NF) | 0.80 ± 0.03 | 0.09 | 0.13 |
+| NF | 0.80 ± 0.03 | 0.09 | 0.13 |
 | **Average** | **0.79 ± 0.03** | **0.10** | **0.14** |
 
 ### Ablation Studies
