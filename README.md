@@ -533,7 +533,7 @@ MIT License - see [LICENSE](LICENSE) file.
 
 **Lead Author**: Dawazhaxi  
 **GitHub**: [@DAWAZHAXI](https://github.com/DAWAZHAXI)  
-**Email**: [your.email@institution.edu](mailto:your.email@institution.edu)
+**Email**: [15687851457@163.com](mailto:your.email@institution.edu)
 
 **Report Issues:** [GitHub Issues](https://github.com/DAWAZHAXI/Deep_Rural_livelihood_model/issues)
 
