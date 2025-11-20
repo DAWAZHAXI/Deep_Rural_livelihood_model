@@ -170,7 +170,7 @@ Pure Farming (F) ←─→ F_NF ←─→ NF_F ←─→ Pure Non-Farming (NF)
 | **Model Size** | 4.8 MB (FP32) |
 | **Input Shape** | Day: [B,7,64,64] + Night: [B,1,64,64] |
 | **Output Shape** | [B, 4, 64, 64] |
-| **Training Time** | ~40 min/fold (GPU) |
+| **Training Time** | ~5 h/fold (GPU) |
 | **Inference Time** | ~10 min (10k×10k image, GPU) |
 
 ---
