@@ -1,5 +1,5 @@
 # Deep Rural Livelihood Model 🌾
-<img width="1802" height="311" alt="image" src="https://github.com/user-attachments/assets/f1c883fa-2063-4bda-8cf0-fbda70da5644" />
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
