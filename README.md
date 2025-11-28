@@ -32,7 +32,7 @@ This work was supported by: *****
 
 <p align="center">
   <img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/758b0b8c-1cb3-4b8e-b418-8bea4877c378" />
-  <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/3628f0bb-d016-4d24-9183-6fc9c5ae9c27" />
+  <img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/3628f0bb-d016-4d24-9183-6fc9c5ae9c27" />
   <img width="500" height="550" alt="image" src="https://github.com/user-attachments/assets/ab54e17d-4cb4-4025-b77c-aaf90a58ddfb" />
 
 
