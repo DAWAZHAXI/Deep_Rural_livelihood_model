@@ -30,19 +30,17 @@ This work was supported by: *****
 
 ## 🌟 Overview
 
-<p align="center">
-  <img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/758b0b8c-1cb3-4b8e-b418-8bea4877c378" />
-  <br>
-  <em>Figure 1: Contribution of this study</em>
-  </p>
-  <img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/3628f0bb-d016-4d24-9183-6fc9c5ae9c27" />
-  <br>
-  <em>Figure 2: Mapping flow</em>
-  </p>
-  <img width="500" height="550" alt="image" src="https://github.com/user-attachments/assets/ab54e17d-4cb4-4025-b77c-aaf90a58ddfb" />
-  <br>
-  <em>Figure 3: Spatiotemporal distribution of rural livelihood index across China (2010-2020)</em>
-  </p>
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/758b0b8c-1cb3-4b8e-b418-8bea4877c378" />
+
+*Figure 1: Contribution of this study*
+
+<img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/3628f0bb-d016-4d24-9183-6fc9c5ae9c27" />
+
+*Figure 2: Mapping flow*
+
+<img width="500" height="550" alt="image" src="https://github.com/user-attachments/assets/ab54e17d-4cb4-4025-b77c-aaf90a58ddfb" />
+
+*Figure 3: Spatiotemporal distribution of rural livelihood index across China (2010-2020)*
 
 This repository contains the complete implementation of our deep learning framework for mapping China's rural livelihood patterns using multi-modal satellite imagery. 
 
