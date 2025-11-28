@@ -202,10 +202,10 @@ Pure Farming (F) ←─→ F_NF ←─→ NF_F ←─→ Pure Non-Farming (NF)
 | Component | Specification |
 |-----------|---------------|
 | **OS** | Windows 10 / Linux (Ubuntu 20.04+) |
-| **CPU** | Intel Xeon Silver 4214 @ 2.20GHz (or equivalent) |
-| **RAM** | 125 GB (minimum 64 GB recommended) |
+| **CPU** | Intel Xeon W-2295|
+| **RAM** | 128 GB (minimum 64 GB recommended) |
 | **Storage** | 500 GB free space |
-| **GPU** | NVIDIA Quadro P2200 (5GB VRAM) or better |
+| **GPU** | NVIDIA RTX A5000 (24GB VRAM) (minimum 10 GB recommended) |
 | **CUDA** | 11.0+ |
 | **cuDNN** | 8.0+ |
 
