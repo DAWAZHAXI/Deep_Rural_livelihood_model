@@ -115,13 +115,6 @@ Our model predicts four distinct rural livelihood types based on household incom
 
 **Mathematical Constraint**: F + F_NF + NF_F + NF = 1.0 (proportions sum to unity)
 
-#### Livelihood Transition Spectrum
-```
-Pure Farming (F) ←─→ F_NF ←─→ NF_F ←─→ Pure Non-Farming (NF)
-    │                                          │
-    └──────── Transition Zone ─────────────────┘
-```
-
 **Real-World Examples:**
 - **F**: Traditional grain-producing villages in Henan Province
 - **F_NF**: Rice farming areas with emerging agritourism in Jiangxi
@@ -130,15 +123,11 @@ Pure Farming (F) ←─→ F_NF ←─→ NF_F ←─→ Pure Non-Farming (NF)
 **Constraint**: F + F_NF + NF_F + NF = 1.0
 
 ### Model Statistics
-
 | Metric | Value |
 |--------|-------|
-| **Total Parameters** | 1,200,000 (1.2M) |
-| **Model Size** | 4.8 MB (FP32) |
-| **Input Shape** | Day: [B,7,64,64] + Night: [B,1,64,64] |
 | **Output Shape** | [B, 4, 64, 64] |
-| **Training Time** | ~5 h/fold (GPU) |
-| **Inference Time** | ~10 min (10k×10k image, GPU) |
+| **Training Time** | ~20 h/5-fold (GPU) |
+| **Inference Time** | ~6 h (10k×10k image, GPU) |
 
 ---
 
