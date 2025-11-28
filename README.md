@@ -6,7 +6,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![Paper](Currently writing)](https://*****)
 
-> **Mapping rural livelihood strategies to reveal the socio-ecological impacts of rural development**
+> **Mapping rural livelihood strategies to reveal the equality of urbanity**
 
 This work was supported by: *****
 
@@ -406,7 +406,7 @@ plt.savefig('forest_map.png', dpi=300)
 
 If you use this code in your research, please cite:
 
-> Dawazhaxi, *et al*. "Mapping rural livelihood strategies to reveal the socio-ecological impacts of rural development." *Journal Name* **11**, 2583 (2026). https://doi.org/*****
+> Dawazhaxi, *et al*. "Mapping rural livelihood strategies to reveal the equality of urbanity." *Journal Name* **11**, 2583 (2026). https://doi.org/*****
 
 **BibTeX:**
 ```bibtex
