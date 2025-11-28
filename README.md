@@ -32,7 +32,9 @@ This work was supported by: *****
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f1c883fa-2063-4bda-8cf0-fbda70da5644" alt="Rural Livelihood Mapping" width="100%"/>
-  ![AAA](https://github.com/user-attachments/assets/8b7dfe46-09ba-4dee-b22a-f4d61d70fb90)
+  <img width="1215" height="931" alt="image" src="https://github.com/user-attachments/assets/ab54e17d-4cb4-4025-b77c-aaf90a58ddfb" />
+
+
 
   <br>
   <em>Figure 1: Spatiotemporal distribution of rural livelihood index across China (2015-2025)</em>
