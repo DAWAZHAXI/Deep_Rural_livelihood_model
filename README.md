@@ -1,4 +1,4 @@
-<img width="411" height="81" alt="image" src="https://github.com/user-attachments/assets/2841a4b8-a838-4404-8f33-167f86ee1b3e" /># Deep Rural Livelihood Model 🌾🏕💰
+# Deep Rural Livelihood Model 🌾🏕💰
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
