@@ -245,7 +245,7 @@ Four main steps:
 
 ### Step 1: Export from GEE
 
-Run `Export_images_from_GEE.js` in Google Earth Engine Code Editor.
+Run the `Export_images_from_GEE.js` script in the Google Earth Engine code editor, and use '********' to complete the normalised z-score with a mean of 0 and a standard deviation of 1.
 
 **Output:**
 ```
@@ -295,23 +295,6 @@ Attributes:
 Constraint: F + F_NF + NF_F + NF = 1.0
 ```
 
-### Data Structure
-
-```
-Deep_Rural_livelihood_model/
-├── Data/
-│   ├── Sample_2020.shp
-│   └── Landsat_NL_Mector_90m_zscore/
-│       ├── Landsat_RED_2020_90m_zscore.tif
-│       └── ... (7 more files)
-├── Notebooks/
-│   ├── Export_images_from_GEE.js
-│   └── ... (3 notebooks)
-└── Scripts/
-    ├── train_complete.py
-    └── inference_mapping.ipynb
-```
-
 ---
 
 ## 🚀 Model Training
@@ -332,7 +315,7 @@ WEIGHT_DECAY = 1e-3     # L2 regularization
 
 **Basic training:**
 ```bash
-python Scripts/train_complete.py \
+python Scripts/00.Train_complete_Random-5-Fold-CV.py\
     --data_dir Data/ \
     --output_dir model_outputs_2020/ \
     --batch_size 256 \
@@ -342,7 +325,7 @@ python Scripts/train_complete.py \
 
 **Quick test:**
 ```bash
-python Scripts/train_complete.py \
+python Scripts/00.Train_complete_Random-5-Fold-CV.py \
     --quick_test \
     --max_samples 500 \
     --epochs 20
@@ -378,8 +361,8 @@ model_outputs_2020/
 ### Full-Image Inference
 
 ```bash
-python Scripts/inference_mapping.py \
-    --model_path model_outputs_2020/model_fold1_rep0_lr0.001_wd0.01.pth \
+python Scripts/02.Inference_2020_optimized_final.py \
+    --model_path model_outputs_2020/model_fold3_rep0_lr0.001_wd0.01.pth \
     --day_images Data/Landsat_NL_Mector_90m_zscore/ \
     --night_image Data/Landsat_NL_Mector_90m_zscore/VIIRS_2020_90m_zscore.tif \
     --output_dir predictions_2020/ \
