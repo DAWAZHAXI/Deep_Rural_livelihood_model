@@ -1,4 +1,4 @@
-# Deep Rural Livelihood Model 🌾🏕💰
+<img width="411" height="81" alt="image" src="https://github.com/user-attachments/assets/2841a4b8-a838-4404-8f33-167f86ee1b3e" /># Deep Rural Livelihood Model 🌾🏕💰
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -98,49 +98,9 @@ Our approach integrates:
 
 ### Model Overview
 
-Our **FusionResNetDirichlet** model employs a dual-branch architecture for processing multi-modal satellite data:
+Our **DualResNet-Dirichlet** model employs a dual-branch architecture for processing multi-modal satellite data:
+<img width="1042" height="328" alt="image" src="https://github.com/user-attachments/assets/67ac3050-e451-4bb6-8846-f7c97bd78c49" />
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│                   FusionResNetDirichlet                      │
-└──────────────────────────────────────────────────────────────┘
-                           │
-           ┌───────────────┴───────────────┐
-           │                               │
-           ▼                               ▼
-  ┌─────────────────┐           ┌─────────────────┐
-  │  Day Branch     │           │ Night Branch    │
-  │  Input: 7ch     │           │ Input: 1ch      │
-  │  Output: 64ch   │           │ Output: 64ch    │
-  │  • Conv 7→64    │           │ • Conv 1→64     │
-  │  • PreActBlock×3│           │ • PreActBlock×3 │
-  │  • BN + ReLU    │           │ • BN + ReLU     │
-  └─────────────────┘           └─────────────────┘
-           │                               │
-           └───────────────┬───────────────┘
-                           │
-                           ▼
-                 ┌─────────────────┐
-                 │  Fusion Layer   │
-                 │  • Concat 128ch │
-                 │  • Conv 128→64  │
-                 │  • PreActBlock×5│
-                 │  • BN + ReLU    │
-                 └─────────────────┘
-                           │
-                           ▼
-                 ┌─────────────────┐
-                 │ Prediction Head │
-                 │  • Conv 64→64   │
-                 │  • Dropout(0.1) │
-                 │  • Conv 64→4    │
-                 │  • Softplus + 1 │
-                 └─────────────────┘
-                           │
-                           ▼
-                     Dirichlet α
-                    (4 components)
-```
 
 ### Component Definitions
 
