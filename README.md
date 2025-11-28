@@ -45,14 +45,14 @@ This repository contains the complete implementation of our deep learning framew
 ### 🎯 Research Scope
 
 - **Spatial Coverage**: 30,667 rural townships across China
-- **Temporal Range**: 2015-2025 (Annual resolution)
-- **Spatial Resolution**: 90 meters
+- **Temporal Range**: 2010-2020 (two year)
+- **Spatial Resolution**: 30 meters
 - **Prediction Accuracy**: R² = 0.75-0.85 across all components
 
 ### 🛰️ Data Sources
 
 Our approach integrates:
-- **Daytime Landsat-8** imagery (7 spectral bands: RED, GREEN, BLUE, NIR, SWIR1, SWIR2, THERMAL)
+- **Daytime Landsat-8/9** imagery (7 spectral bands: RED, GREEN, BLUE, NIR, SWIR1, SWIR2, THERMAL)
 - **Nighttime VIIRS-DNB** data for socioeconomic indicators
 - **Survey data** from 30,000+ rural townships
 
