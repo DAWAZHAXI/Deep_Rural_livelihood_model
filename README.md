@@ -99,7 +99,7 @@ Our approach integrates:
 ### Model Overview
 
 Our **DualResNet-Dirichlet** model employs a dual-branch architecture for processing multi-modal satellite data:
-<img width="1042" height="328" alt="image" src="https://github.com/user-attachments/assets/67ac3050-e451-4bb6-8846-f7c97bd78c49" />
+<img width="1042" height="528" alt="image" src="https://github.com/user-attachments/assets/67ac3050-e451-4bb6-8846-f7c97bd78c49" />
 
 
 ### Component Definitions
