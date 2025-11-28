@@ -183,24 +183,11 @@ Pure Farming (F) ←─→ F_NF ←─→ NF_F ←─→ Pure Non-Farming (NF)
 ## 📊 Results
 
 ### Performance Metrics
+<img width="973" height="834" alt="image" src="https://github.com/user-attachments/assets/dbd12cbf-03f3-4943-bfe8-e76bf4767bc0" />
 
-| Component | R² Score | MAE | RMSE |
-|-----------|----------|-----|------|
-| F| 0.82 ± 0.03 | 0.08 | 0.12 |
-| F-NF | 0.75 ± 0.04 | 0.11 | 0.15 |
-| NF-F | 0.77 ± 0.03 | 0.10 | 0.14 |
-| NF | 0.80 ± 0.03 | 0.09 | 0.13 |
-| **Average** | **0.79 ± 0.03** | **0.10** | **0.14** |
 
 ### Ablation Studies
-
-| Configuration | R² Score | Parameters |
-|---------------|----------|------------|
-| Day only | 0.68 | 0.6M |
-| Night only | 0.52 | 0.6M |
-| Early fusion | 0.73 | 1.1M |
-| **Ours (mid-level)** | **0.79** | **1.2M** |
-| Late fusion | 0.76 | 1.3M |
+<img width="837" height="470" alt="image" src="https://github.com/user-attachments/assets/d83a5450-5863-4436-bded-ef2cf1723d44" />
 
 ---
 
