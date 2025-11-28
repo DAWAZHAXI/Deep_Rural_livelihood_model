@@ -245,7 +245,7 @@ Four main steps:
 
 ### Step 1: Export from GEE
 
-Run the `Export_images_from_GEE.js` script in the Google Earth Engine code editor, and use '********' to complete the normalised z-score with a mean of 0 and a standard deviation of 1.
+Run the `Export_images_from_GEE.js` script in the Google Earth Engine code editor, and use '特征影像z_score处理.ipynb' to complete the normalised z-score with a mean of 0 and a standard deviation of 1.
 
 **Output:**
 ```
@@ -284,17 +284,15 @@ Use ArcGIS Pro to create `Sample_2020.shp`:
 ```
 Attributes:
 ├── ID: Unique identifier
-├── F: Forest proportion [0-1]
-├── F_NF: Forest-NonForest [0-1]
-├── NF_F: NonForest-Forest [0-1]
-├── NF: NonForest proportion [0-1]
+├── F: [0-1]
+├── F_NF: [0-1]
+├── NF_F: [0-1]
+├── NF: [0-1]
 ├── longitude: X coordinate
 ├── latitude: Y coordinate
-└── township_code: Admin code
 
 Constraint: F + F_NF + NF_F + NF = 1.0
 ```
-
 ---
 
 ## 🚀 Model Training
