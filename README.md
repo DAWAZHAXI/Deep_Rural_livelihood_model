@@ -31,9 +31,9 @@ This work was supported by: *****
 ## 🌟 Overview
 
 <p align="center">
-  <img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/758b0b8c-1cb3-4b8e-b418-8bea4877c378" />
-  <img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/415cc64d-a63b-4b6b-ade3-06688934af10" />
-  <img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/ab54e17d-4cb4-4025-b77c-aaf90a58ddfb" />
+  <img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/758b0b8c-1cb3-4b8e-b418-8bea4877c378" />
+  <img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/3628f0bb-d016-4d24-9183-6fc9c5ae9c27" />
+  <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/ab54e17d-4cb4-4025-b77c-aaf90a58ddfb" />
 
 
 
