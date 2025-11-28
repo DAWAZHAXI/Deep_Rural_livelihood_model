@@ -6,7 +6,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![Paper](Currently writing)](https://*****)
 
-> **Mapping China's Rural Livelihood Index using Multi-Modal Remote Sensing and Deep Learning**
+> **Mapping rural livelihood strategies to reveal the socio-ecological impacts of rural development**
 
 This work was supported by: *****
 
@@ -406,12 +406,12 @@ plt.savefig('forest_map.png', dpi=300)
 
 If you use this code in your research, please cite:
 
-> Dawazhaxi, *et al*. "Mapping China's Rural Livelihood Index using Multi-Modal Remote Sensing and Deep Learning." *Journal Name* **11**, 2583 (2026). https://doi.org/*****
+> Dawazhaxi, *et al*. "Mapping rural livelihood strategies to reveal the socio-ecological impacts of rural development." *Journal Name* **11**, 2583 (2026). https://doi.org/*****
 
 **BibTeX:**
 ```bibtex
 @article{dawazhaxi2026rural,
-  title={Mapping China's Rural Livelihood Index using Multi-Modal Remote Sensing and Deep Learning},
+  title={Mapping rural livelihood strategies to reveal the socio-ecological impacts of rural development},
   author={Dawazhaxi and [Co-authors]},
   journal={Journal Name},
   volume={11},
