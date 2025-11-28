@@ -148,7 +148,7 @@ Pure Farming (F) ←─→ F_NF ←─→ NF_F ←─→ Pure Non-Farming (NF)
 <img width="500" height="450" alt="image" src="https://github.com/user-attachments/assets/dbd12cbf-03f3-4943-bfe8-e76bf4767bc0" />
 
 
-### Ablation Studies
+### Validation Studies
 <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/d83a5450-5863-4436-bded-ef2cf1723d44" />
 
 ---
