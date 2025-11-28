@@ -397,10 +397,10 @@ python Scripts/inference_mapping.py \
 
 ```
 predictions_2020/
-├── pred_best_F_2020_90m.tif       # Forest
-├── pred_best_F_NF_2020_90m.tif    # Forest-NonForest
-├── pred_best_NF_F_2020_90m.tif    # NonForest-Forest
-├── pred_best_NF_2020_90m.tif      # NonForest
+├── pred_best_F_2020_90m.tif       
+├── pred_best_F_NF_2020_90m.tif   
+├── pred_best_NF_F_2020_90m.tif    
+├── pred_best_NF_2020_90m.tif      
 └── prediction_overview.png         # Visualization
 ```
 
