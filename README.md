@@ -15,7 +15,6 @@ This work was supported by: *****
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
-- [Key Features](#-key-features)
 - [Architecture](#-architecture)
 - [Results](#-results)
 - [Installation](#-installation)
@@ -57,40 +56,6 @@ Our approach integrates:
 - **Daytime Landsat-8/9** imagery (7 spectral bands: RED, GREEN, BLUE, NIR, SWIR1, SWIR2, THERMAL)
 - **Nighttime VIIRS-DNB** data for socioeconomic indicators
 - **Survey data** from 30,000+ rural townships
-
----
-
-## ✨ Key Features
-
-### 🔬 Technical Innovations
-
-✅ **Dual-Branch Architecture**
-- Separate feature extraction for day/night modalities
-- Mid-level fusion for optimal information integration  
-- Lightweight design (~1.2M parameters)
-
-✅ **Dirichlet Distribution Output**
-- Natural probability constraints (Σp = 1)
-- Uncertainty quantification
-- Theoretically principled framework
-
-✅ **Multi-Scale Feature Learning**
-- PreActivation ResNet blocks
-- Deep residual connections (11 total blocks)
-- No spatial downsampling (preserves 64×64 resolution)
-
-✅ **Robust Training Strategy**
-- 5-fold cross-validation
-- Data augmentation (flips, rotations, brightness/contrast)
-- Early stopping with patience
-- AdamW optimizer with weight decay
-
-### 🎯 Applications
-
-- **Rural Development Planning**: Identify areas requiring targeted interventions
-- **Poverty Alleviation**: Track socioeconomic changes over time
-- **Environmental Monitoring**: Assess forest-agriculture transitions
-- **Policy Evaluation**: Quantify impacts of rural revitalization programs
 
 ---
 
