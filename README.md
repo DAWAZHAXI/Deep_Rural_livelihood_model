@@ -111,7 +111,7 @@ Our model predicts four distinct rural livelihood types based on household incom
 ## 📊 Results
 
 ### Performance Metrics
-<img width="500" height="450" alt="image" src="https://github.com/user-attachments/assets/dbd12cbf-03f3-4943-bfe8-e76bf4767bc0" />
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/f5c04f78-3531-42da-a798-f8ce4bc857cb" />
 
 
 ### Validation Studies
