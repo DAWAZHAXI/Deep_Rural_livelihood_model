@@ -37,19 +37,19 @@ This work was supported by: *****
 
 *Figure 2: Mapping flow*
 
-<img width="1205" height="674" alt="image" src="https://github.com/user-attachments/assets/7a8b628c-a94b-473a-ad59-4f34acb56731" />
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/7a8b628c-a94b-473a-ad59-4f34acb56731" />
 
 *Figure 3: Proportion of rural livelihoods dependent purely on farming (Spatial resolution: 90m)*
 
-<img width="1204" height="673" alt="image" src="https://github.com/user-attachments/assets/d9af3814-3002-402a-97a5-d9683998a334" />
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/d9af3814-3002-402a-97a5-d9683998a334" />
 
 *Figure 4: Proportion of rural livelihoods primarily farming with non-farm as a secondary activity (spatial resolution: 90 metres)*
 
-<img width="1199" height="669" alt="image" src="https://github.com/user-attachments/assets/3002c2ba-803b-49ba-a1f7-1eaf2c3c5118" />
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/3002c2ba-803b-49ba-a1f7-1eaf2c3c5118" />
 
 *Figure 5: Proportion of rural livelihoods primarily non-farm with farming as a secondary activity (spatial resolution: 90 metres)*
 
-<img width="1200" height="675" alt="image" src="https://github.com/user-attachments/assets/8585603e-cf6d-419c-87be-dcc6cac92953" />
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/8585603e-cf6d-419c-87be-dcc6cac92953" />
 
 *Figure 6: Proportion of rural livelihoods dependent purely on non-farm (Spatial resolution: 90m)*
 
