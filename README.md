@@ -37,9 +37,21 @@ This work was supported by: *****
 
 *Figure 2: Mapping flow*
 
-<img width="500" height="550" alt="image" src="https://github.com/user-attachments/assets/ab54e17d-4cb4-4025-b77c-aaf90a58ddfb" />
+<img width="1205" height="674" alt="image" src="https://github.com/user-attachments/assets/7a8b628c-a94b-473a-ad59-4f34acb56731" />
 
-*Figure 3: Spatiotemporal distribution of rural livelihood index across China (2010-2020, 90m)*
+*Figure 3: Proportion of rural livelihoods dependent purely on farming (Spatial resolution: 90m)*
+
+<img width="1204" height="673" alt="image" src="https://github.com/user-attachments/assets/d9af3814-3002-402a-97a5-d9683998a334" />
+
+*Figure 4: Proportion of rural livelihoods primarily farming with non-farm as a secondary activity (spatial resolution: 90 metres)*
+
+<img width="1199" height="669" alt="image" src="https://github.com/user-attachments/assets/3002c2ba-803b-49ba-a1f7-1eaf2c3c5118" />
+
+*Figure 5: Proportion of rural livelihoods primarily non-farm with farming as a secondary activity (spatial resolution: 90 metres)*
+
+<img width="1200" height="675" alt="image" src="https://github.com/user-attachments/assets/8585603e-cf6d-419c-87be-dcc6cac92953" />
+
+*Figure 6: Proportion of rural livelihoods dependent purely on non-farm (Spatial resolution: 90m)*
 
 This repository contains the complete implementation of our deep learning framework for mapping China's rural livelihood patterns using multi-modal satellite imagery. 
 
