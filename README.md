@@ -103,8 +103,8 @@ Our model predicts four distinct rural livelihood types based on household incom
 | Metric | Value |
 |--------|-------|
 | **Output Shape** | [B, 4, 64, 64] |
-| **Training Time** | ~20 h/5-fold (GPU) |
-| **Inference Time** | ~6 h (10k×10k image, GPU) |
+| **Training Time** | ~90 h/Random 5-fold and OOR model (GPU) |
+| **Inference Time** | ~8 h (10k×10k image, GPU) |
 
 ---
 
