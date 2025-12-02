@@ -280,7 +280,7 @@ python Model/00.Train_complete_Random-5-Fold-CV.py
 - Performance results: `stage2_fraction_results.csv`
 - Visualizations: Run `01.Plot_results.ipynb`
 
-**Expected R²:** 0.85-0.90 (100% data)  
+**Expected R²:** >0.75 (100% data)  
 ---
 
 ### Stage 2: Regional Models → for partition weighting
