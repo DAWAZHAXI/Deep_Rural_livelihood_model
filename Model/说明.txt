@@ -1,3 +1,6 @@
 1、先运行“00.Train_complete_Random-5-Fold-CV.py”
 2、再运行“00.Train_Out-of-Region_5-fold-CV.py”
 3、然后开始推理制图“02.inference_2020_random_add_region_全像元.py”
+
+推理时候结合全局模型【Global_best_model_from_Random_spatial_5-fold 】
+然后通过区域模型分区加权【Out_of_region_6_weight_model中的6个模型】
