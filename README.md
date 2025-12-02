@@ -6,8 +6,8 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![Paper](Currently writing)](https://*****)
 
-> **Mapping rural livelihood strategies to reveal the equality of urbanity**>
-![plot](https://github.com/user-attachments/assets/122862bc-282c-4dd9-a4bb-47fb455fdccf)
+**Mapping rural livelihood strategies to reveal the equality of urbanity**
+>![plot](https://github.com/user-attachments/assets/122862bc-282c-4dd9-a4bb-47fb455fdccf)
 ---
 
 ## 📋 Table of Contents
