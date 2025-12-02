@@ -1,4 +1,4 @@
-![plot](https://github.com/user-attachments/assets/122862bc-282c-4dd9-a4bb-47fb455fdccf)# Deep rural livelihoods model (DRLM) 🌾🏕💰🐏🐂🐖
+# Deep rural livelihoods model (DRLM) 🌾🏕💰🐏🐂🐖
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -6,7 +6,8 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![Paper](Currently writing)](https://*****)
 
-> **Mapping rural livelihood strategies to reveal the equality of urbanity**
+> **Mapping rural livelihood strategies to reveal the equality of urbanity**>
+> ![plot](https://github.com/user-attachments/assets/122862bc-282c-4dd9-a4bb-47fb455fdccf)
 ---
 
 ## 📋 Table of Contents
