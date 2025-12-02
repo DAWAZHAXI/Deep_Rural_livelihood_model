@@ -444,7 +444,7 @@ If you use this code in your research, please cite:
 **BibTeX:**
 ```bibtex
 @article{dawazhaxi2026rural,
-  title={Mapping rural livelihood strategies to reveal the socio-ecological impacts of rural development},
+  title={Mapping rural livelihood strategies to reveal the equality of urbanity},
   author={Dawazhaxi and [Co-authors]},
   journal={Journal Name},
   volume={11},
