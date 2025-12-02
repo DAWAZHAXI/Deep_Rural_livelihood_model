@@ -1,5 +1,5 @@
-1、先运行“00.Train_complete_Random-5-Fold-CV.py”
-2、再运行“00.Train_Out-of-Region_5-fold-CV.py”
+1、先运行“00.Train_complete_Random-5-Fold-CV.py”，“01.Plot_results.ipynb”是针对上述代码结果的拟合优度评估
+2、再运行“00.Train_Out-of-Region_5-fold-CV.py”，该代码的拟合优度评估在最佳模型文件夹中
 3、然后开始推理制图“02.inference_2020_random_add_region_全像元.py”
 
 推理时候结合全局模型【Global_best_model_from_Random_spatial_5-fold 】
