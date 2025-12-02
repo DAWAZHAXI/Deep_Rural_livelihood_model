@@ -447,9 +447,7 @@ This work was supported by: *****
 
 ## 📞 Contact
 
-**Lead Author**: Dawazhaxi  
-**GitHub**: [@DAWAZHAXI](https://github.com/DAWAZHAXI)  
-**Email**: [15687851457@163.com](mailto:your.email@institution.edu)
+**Lead Author**: Dawazhaxi  **GitHub**: [@DAWAZHAXI](https://github.com/DAWAZHAXI)  **Email**: [15687851457@163.com](mailto:your.email@institution.edu)  
 **Report Issues:** [GitHub Issues](https://github.com/DAWAZHAXI/Deep_Rural_livelihood_model/issues)
 
 ---
