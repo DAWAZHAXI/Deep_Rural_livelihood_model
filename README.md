@@ -7,7 +7,7 @@
 [![Paper](Currently writing)](https://*****)
 
 > **Mapping rural livelihood strategies to reveal the equality of urbanity**>
-> ![plot](https://github.com/user-attachments/assets/122862bc-282c-4dd9-a4bb-47fb455fdccf)
+
 ---
 
 ## 📋 Table of Contents
