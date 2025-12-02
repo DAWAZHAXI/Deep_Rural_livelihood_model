@@ -1,1 +1,1 @@
-
+During inference, integrate the global model [Global_best_model_from_Random_spatial_5-fold] and apply regional model partition weighting [the 6 models within Out_of_region_6_weight_model].
