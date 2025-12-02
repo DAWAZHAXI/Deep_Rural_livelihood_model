@@ -19,6 +19,7 @@
 - [Data Preparation](#-data-preparation)
 - [Model Training](#-model-training)
 - [Inference](#️-inference-and-mapping)
+- [Demo study](#-demo-study)
 - [Citation](#-citation)
 - [License](#-license)
 - [Acknowledgments](#-acknowledgments)
@@ -402,6 +403,9 @@ project/
     ├── model_outputs_2020_OUT_OF_REGION_MACRO_SOFT/ # Stage 2 outputs
     └── maps_2020_ensemble_regional_adaptive/        # Inference outputs
 ```
+---
+## 🎮 Demo study
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/c4aadb38-058a-409c-90d1-1c2e89d86040" />
 
 ---
 
@@ -418,50 +422,11 @@ If you use this code in your research, please cite:
 ```
 
 ---
-
-## 📧 Support
-
-- **Issues:** [GitHub Issues](../../issues)
-- **Documentation:** See individual script headers for detailed parameters
-- **Contact:** your.email@example.com
-
----
-
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-**Note:** Adjust all file paths in scripts according to your local directory structure before running.
-
-## 📖 Citation
-
-If you use this code in your research, please cite:
-
-> Dawazhaxi, *et al*. "Mapping rural livelihood strategies to reveal the equality of urbanity." *Journal Name* **11**, 2583 (2026). https://doi.org/*****
-
-**BibTeX:**
-```bibtex
-@article{dawazhaxi2026rural,
-  title={Mapping rural livelihood strategies to reveal the equality of urbanity},
-  author={Dawazhaxi and [Co-authors]},
-  journal={Journal Name},
-  volume={11},
-  pages={2583},
-  year={2026},
-  doi={10.XXXX/XXXXX}
-}
-```
-
----
-
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) file.
-
----
-
 ## 🙏 Acknowledgments
 This work was supported by: *****
 **Funding:**
