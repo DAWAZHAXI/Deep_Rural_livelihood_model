@@ -7,24 +7,22 @@
 [![Paper](Currently writing)](https://*****)
 
 > **Mapping rural livelihood strategies to reveal the equality of urbanity**
-
-This work was supported by: *****
-
+![alt text](file:///c%3A/Users/72484/Desktop/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3.svg)
 ---
 
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
-- [Architecture](#-architecture)
+- [Architecture](#️-architecture)
 - [Results](#-results)
 - [Installation](#-installation)
 - [Data Preparation](#-data-preparation)
 - [Model Training](#-model-training)
-- [Inference](#-inference-and-mapping)
+- [Inference](#️-inference-and-mapping)
 - [Citation](#-citation)
-- [Contributing](#-contributing)
 - [License](#-license)
-
+- [Acknowledgments](#-acknowledgments)
+- [Contact](#-contact)
 ---
 
 ## 🌟 Overview
@@ -263,110 +261,179 @@ Constraint: F + F_NF + NF_F + NF = 1.0
 
 ## 🚀 Model Training
 
-### Configuration
+### Stage 1: Random Cross-Validation → for global evaluation
 
-**Key Hyperparameters:**
-```python
-PATCH_SIZE = 64         # Input size
-BATCH_SIZE = 256        # Training batch
-EPOCHS = 300            # Max epochs
-PATIENCE = 15           # Early stopping
-LEARNING_RATE = 3e-4    # Initial LR
-WEIGHT_DECAY = 1e-3     # L2 regularization
-```
+**Script:** `00.Train_complete_Random-5-Fold-CV.py`
 
-### Training Commands
-
-**Basic training:**
+Trains global baseline model with 5-fold cross-validation.
 ```bash
-python Scripts/00.Train_complete_Random-5-Fold-CV.py\
-    --data_dir Data/ \
-    --output_dir model_outputs_2020/ \
-    --batch_size 256 \
-    --epochs 300 \
-    --device cuda
+# Full training
+python Model/00.Train_complete_Random-5-Fold-CV.py
+
+# Quick test (edit QUICK_TEST = True in script)
+python Model/00.Train_complete_Random-5-Fold-CV.py
 ```
 
-**Quick test:**
+**Outputs:**
+- 5 trained models: `model_fold{1-5}_rep0_lr0.0003_wd0.001.pth`
+- Performance results: `stage2_fraction_results.csv`
+- Visualizations: Run `01.Plot_results.ipynb`
+
+**Expected R²:** 0.85-0.90 (100% data)  
+---
+
+### Stage 2: Regional Models → for partition weighting
+
+**Script:** `00.Train_Out-of-Region_5-fold-CV.py`
+
+Trains 6 region-specific models for spatial heterogeneity.
+
+**Regions:** 东北, 华北, 华东, 中南, 西南, 西北
 ```bash
-python Scripts/00.Train_complete_Random-5-Fold-CV.py \
-    --quick_test \
-    --max_samples 500 \
-    --epochs 20
+python Model/00.Train_Out-of-Region_5-fold-CV.py
 ```
 
-### Training Pipeline
+**Strategy:** Each region uses 20% samples for testing, 80% + other regions for training.
 
-5-fold cross-validation:
-```
-Dataset (N=30,000)
-    ├─ Fold 1: Train=24k | Val=3k | Test=3k
-    ├─ Fold 2: Train=24k | Val=3k | Test=3k
-    ├─ Fold 3: Train=24k | Val=3k | Test=3k
-    ├─ Fold 4: Train=24k | Val=3k | Test=3k
-    └─ Fold 5: Train=24k | Val=3k | Test=3k
-```
+**Outputs:** 6 regional models (`model_OOR_macro_soft_fold{1-6}_lr0.0003_wd0.001.pth`)
 
-### Output Files
-
-```
-model_outputs_2020/
-├── model_fold1_rep0_lr0.001_wd0.01.pth
-├── model_fold2_rep0_lr0.001_wd0.01.pth
-├── ... (5 models)
-├── stage2_fraction_results.csv
-└── summary_report.txt
-```
+**Auto-Resume:** Re-run if interrupted - continues from checkpoint automatically.
 
 ---
 
 ## 🗺️ Inference and Mapping
 
-### Full-Image Inference
+**Script:** `02.inference_2020_random_add_region_全像元.py`
 
+Generates national-scale livelihood maps using adaptive regional ensemble.
 ```bash
-python Scripts/02.Inference_2020_optimized_final.py \
-    --model_path model_outputs_2020/model_fold3_rep0_lr0.001_wd0.01.pth \
-    --day_images Data/Landsat_NL_Mector_90m_zscore/ \
-    --night_image Data/Landsat_NL_Mector_90m_zscore/VIIRS_2020_90m_zscore.tif \
-    --output_dir predictions_2020/ \
-    --patch_size 64 \
-    --step 32 \
-    --batch_size 16
+python Model/02.inference_2020_random_add_region_全像元.py
 ```
 
-**Key parameters:**
-- `--patch_size 64`: Must match training
-- `--step 32`: 50% overlap
-- `--batch_size 16`: Adjust for GPU memory
+### Ensemble Strategy
+
+Combines **global model** (Stage 1) and **regional models** (Stage 2) with optimized weights:
+
+| Region | Global Weight | Regional Weight |
+|--------|---------------|-----------------|
+| 西北 (Northwest) | 40% | 60% |
+| 华东 (East China) | 50% | 50% |
+| 中南 (Central-South) | 65% | 35% |
+| 东北 (Northeast) | 80% | 20% |
+| 西南 (Southwest) | 80% | 20% |
+| 华北 (North China) | 100% | 0% |
+
 
 ### Output Products
 
+Four national-scale raster maps (GeoTIFF, 90m resolution):
 ```
-predictions_2020/
-├── pred_best_F_2020_90m.tif       
-├── pred_best_F_NF_2020_90m.tif   
-├── pred_best_NF_F_2020_90m.tif    
-├── pred_best_NF_2020_90m.tif      
-└── prediction_overview.png         # Visualization
+maps_2020_ensemble_regional_adaptive/
+├── pred_ensemble_adaptive_F_2020_90m.tif      # Farm-only
+├── pred_ensemble_adaptive_F_NF_2020_90m.tif   # Farm + Non-farm
+├── pred_ensemble_adaptive_NF_F_2020_90m.tif   # Non-farm + Farm
+└── pred_ensemble_adaptive_NF_2020_90m.tif     # Non-farm-only
 ```
 
-### Visualization
+Each pixel contains probability values (0-1) for that livelihood strategy.
 
+**Inference Time:** 8 hours (full China at 90m resolution)
+**Auto-Checkpoint:** Saves progress every 1,000 batches - re-run to resume if interrupted.
+
+---
+
+## 🐛 Troubleshooting
+
+### Out of Memory (OOM)
 ```python
-import rasterio
-import matplotlib.pyplot as plt
+# Reduce batch size in scripts
+BATCH_SIZE = 128   # For training
+BATCH_SIZE = 512   # For inference
+```
 
-with rasterio.open('predictions_2020/pred_best_F_2020_90m.tif') as src:
-    forest = src.read(1)
+### Slow Training
+```python
+USE_AMP = True          # Enable mixed precision
+NUM_WORKERS = 4         # Increase workers (Linux/macOS only)
+```
 
-plt.imshow(forest, cmap='YlGn', vmin=0, vmax=1)
-plt.colorbar(label='Forest Proportion')
-plt.title('Forest Component')
-plt.savefig('forest_map.png', dpi=300)
+### Path Configuration
+
+Update file paths in scripts to match your directory structure:
+```python
+DAY_TIFS = [
+    r"YOUR_PATH\Landsat_RED_2020_90m_zscore.tif",
+    # ... (7 bands total)
+]
+NIGHT_TIF = r"YOUR_PATH\VIIRS_2020_90m_zscore.tif"
+LABEL_SHP = r"YOUR_PATH\Sample_2020.shp"
+PROVINCE_SHP = r"YOUR_PATH\Provinces_China.shp"
+```
+
+### Windows Multiprocessing Issues
+```python
+NUM_WORKERS = 0  # Set to 0 if encountering errors on Windows
 ```
 
 ---
+
+## 📂 Directory Structure
+```
+project/
+├── Model/
+│   ├── 00.Train_complete_Random-5-Fold-CV.py       # Stage 1 training
+│   ├── 00.Train_Out-of-Region_5-fold-CV.py         # Stage 2 training
+│   ├── 01.Plot_results.ipynb                        # Visualization
+│   ├── 02.inference_2020_random_add_region_全像元.py # Inference
+│   └── 说明.txt
+│
+├── Data/ (user-provided)
+│   ├── Landsat_NL_Mector_90m_zscore/
+│   │   ├── Landsat_RED_2020_90m_zscore.tif
+│   │   ├── ... (7 Landsat bands)
+│   │   └── VIIRS_2020_90m_zscore.tif
+│   ├── sample_2020/
+│   │   └── Sample_2020.shp
+│   └── Province_boundary/
+│       └── Provinces_China.shp
+│
+└── Outputs/
+    ├── model_outputs_2020_resnet_optimized/         # Stage 1 outputs
+    ├── model_outputs_2020_OUT_OF_REGION_MACRO_SOFT/ # Stage 2 outputs
+    └── maps_2020_ensemble_regional_adaptive/        # Inference outputs
+```
+
+---
+
+## 📚 Citation
+
+If you use this code in your research, please cite:
+```bibtex
+@article{your_paper_2025,
+  title={Deep Learning-Based Rural Livelihood Mapping Using Multispectral and Nighttime Light Imagery},
+  author={Your Name et al.},
+  journal={Journal Name},
+  year={2025}
+}
+```
+
+---
+
+## 📧 Support
+
+- **Issues:** [GitHub Issues](../../issues)
+- **Documentation:** See individual script headers for detailed parameters
+- **Contact:** your.email@example.com
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+**Note:** Adjust all file paths in scripts according to your local directory structure before running.
 
 ## 📖 Citation
 
@@ -389,23 +456,6 @@ If you use this code in your research, please cite:
 
 ---
 
-## 🤝 Contributing
-
-Contributions welcome! Please:
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
-
-**Guidelines:**
-- Follow PEP 8 style
-- Add unit tests
-- Update documentation
-
----
-
 ## 📄 License
 
 MIT License - see [LICENSE](LICENSE) file.
@@ -413,7 +463,7 @@ MIT License - see [LICENSE](LICENSE) file.
 ---
 
 ## 🙏 Acknowledgments
-
+This work was supported by: *****
 **Funding:**
 - National Natural Science Foundation of China
 - Chinese Academy of Sciences
@@ -435,7 +485,6 @@ MIT License - see [LICENSE](LICENSE) file.
 **Lead Author**: Dawazhaxi  
 **GitHub**: [@DAWAZHAXI](https://github.com/DAWAZHAXI)  
 **Email**: [15687851457@163.com](mailto:your.email@institution.edu)
-
 **Report Issues:** [GitHub Issues](https://github.com/DAWAZHAXI/Deep_Rural_livelihood_model/issues)
 
 ---
