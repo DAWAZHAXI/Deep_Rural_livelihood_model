@@ -32,7 +32,8 @@
 
 *Figure 1: Contribution of this study*
 
-<img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/3628f0bb-d016-4d24-9183-6fc9c5ae9c27" />
+<img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/715d3429-9be1-4966-b154-2f0676bed4a5" />
+
 
 *Figure 2: Mapping flow*
 
