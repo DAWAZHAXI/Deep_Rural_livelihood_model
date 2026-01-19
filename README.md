@@ -6,7 +6,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![Paper](Currently writing)](https://*****)
 
-**Mapping rural livelihood strategies to reveal the equality of urbanity**
+**Mapping rural livelihood strategies in China using deep learning**
 >![plot](https://github.com/user-attachments/assets/122862bc-282c-4dd9-a4bb-47fb455fdccf)
 ---
 
@@ -414,7 +414,7 @@ project/
 If you use this code in your research, please cite:
 ```bibtex
 @article{your_paper_2025,
-  title={Deep Learning-Based Rural Livelihood Mapping Using Multispectral and Nighttime Light Imagery},
+  title={Mapping rural livelihood strategies in China using deep learning},
   author={Your Name et al.},
   journal={Journal Name},
   year={2025}
