@@ -12,7 +12,8 @@ This repository provides the code for the **Deep Rural Livelihood Model (DRLM)**
 
 The released dataset is available at Zenodo: [https://doi.org/10.5281/zenodo.18489933](https://doi.org/10.5281/zenodo.18489933).
 
-![Framework of the Deep Rural Livelihood Model](readme_assets/image1.png)
+<img width="1251" height="1216" alt="image1" src="https://github.com/user-attachments/assets/07dbc2d7-2eb1-4c0f-885c-1448086d0691" />
+
 
 ## What You Can Do With This Repository
 
