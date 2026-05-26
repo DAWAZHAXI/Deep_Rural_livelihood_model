@@ -8,7 +8,7 @@
 
 **Mapping rural livelihood strategies in China using deep learning**
 >![plot](https://github.com/user-attachments/assets/122862bc-282c-4dd9-a4bb-47fb455fdccf)
----
+--- 
 
 ## 📋 Table of Contents
 
